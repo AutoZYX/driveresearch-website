@@ -116,7 +116,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ===== Open Datasets ===== */
 .datasets { padding: 100px 0; background: var(--white); }
-.datasets-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.datasets-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .dataset-card { border-radius: var(--radius); border: 1px solid var(--gray-200); overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
 .dataset-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
 .dataset-card img { width: 100%; height: 200px; object-fit: cover; }
@@ -156,10 +156,15 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ===== Contact ===== */
 .contact { padding: 100px 0; background: var(--gray-50); }
-.contact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 840px; margin: 0 auto; }
-.contact-card { text-align: center; padding: 32px 20px; background: var(--white); border-radius: var(--radius); border: 1px solid var(--gray-200); }
-.contact-card h3 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--blue); margin-bottom: 12px; }
-.contact-card p { font-size: 14px; color: var(--gray-600); line-height: 1.7; }
+.contact-layout { display: flex; gap: 48px; align-items: center; justify-content: center; max-width: 800px; margin: 0 auto; }
+.contact-info { flex: 1; }
+.contact-item { padding: 20px 0; border-bottom: 1px solid var(--gray-200); }
+.contact-item:last-child { border-bottom: none; }
+.contact-item h3 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--blue); margin-bottom: 8px; }
+.contact-item p { font-size: 15px; color: var(--gray-600); line-height: 1.7; }
+.contact-qr { text-align: center; flex-shrink: 0; }
+.contact-qr img { width: 160px; height: 160px; border-radius: var(--radius); border: 1px solid var(--gray-200); margin-bottom: 8px; }
+.contact-qr p { font-size: 13px; color: var(--gray-400); font-weight: 500; }
 
 /* ===== Footer ===== */
 .footer { background: var(--navy); padding: 24px 0; }
@@ -169,10 +174,11 @@ img { max-width: 100%; height: auto; display: block; }
 /* ===== Responsive ===== */
 @media (max-width: 900px) {
   .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .framework-cols, .data-gallery, .data-features, .datasets-grid, .app-grid { grid-template-columns: 1fr; }
+  .framework-cols, .data-features, .app-grid { grid-template-columns: 1fr; }
+  .datasets-grid { grid-template-columns: 1fr 1fr; }
   .about-content { grid-template-columns: 1fr; }
   .affiliations { grid-template-columns: 1fr; }
-  .contact-grid { grid-template-columns: 1fr; }
+  .contact-layout { flex-direction: column; text-align: center; }
   .app-grid { grid-template-columns: 1fr 1fr; }
 }
 @media (max-width: 640px) {
