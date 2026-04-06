@@ -135,19 +135,19 @@ img {
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+.hero-bg {
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 50%, rgba(26,95,173,0.15) 0%, transparent 60%),
-    radial-gradient(ellipse at 70% 30%, rgba(59,158,255,0.1) 0%, transparent 50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, #0d2847 100%);
+  background: linear-gradient(135deg, rgba(10,22,40,0.75) 0%, rgba(19,32,57,0.65) 50%, rgba(13,40,71,0.7) 100%);
 }
 
 .hero-content {
@@ -318,6 +318,23 @@ img {
   background: var(--gray-50);
 }
 
+.data-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 48px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.data-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
+}
+
 .data-features {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -388,6 +405,21 @@ img {
   color: var(--gray-400);
 }
 
+.solutions-visual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.solutions-img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
 .solutions-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -447,6 +479,20 @@ img {
 .about {
   padding: 100px 0;
   background: var(--white);
+}
+
+.about-hero-img {
+  margin-bottom: 40px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.about-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--gray-200);
 }
 
 .about-content {
@@ -589,9 +635,14 @@ img {
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .data-gallery,
+  .solutions-visual,
   .data-features,
   .solutions-grid {
     grid-template-columns: 1fr;
+  }
+  .data-img, .solutions-img {
+    height: 200px;
   }
   .about-content {
     grid-template-columns: 1fr;
