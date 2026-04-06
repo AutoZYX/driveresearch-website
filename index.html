@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DRIVEResearch — Scenario Data-Driven AD Safety</title>
+  <meta name="description" content="DRIVEResearch (驭研科技) provides large-scale aerial naturalistic driving datasets and scenario-based safety solutions for automated driving development and validation.">
+  <link rel="icon" href="images/logo-square.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="images/logo-white.png" alt="DRIVEResearch" class="nav-logo-img">
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#data">Data</a></li>
+        <li><a href="#solutions">Solutions</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Scenario Data-Driven<br>Automated Driving Safety</h1>
+      <p class="hero-sub">场景数据驱动智能交通与自动驾驶安全</p>
+      <p class="hero-desc">The world's largest aerial naturalistic driving dataset — enabling scenario-based validation for safer automated vehicles.</p>
+      <div class="hero-actions">
+        <a href="#data" class="btn btn-primary">Explore Dataset</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Stats -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <h2 class="section-title">Overview</h2>
+      <p class="section-subtitle">One of the world's largest aerial naturalistic driving datasets, capturing real-world traffic interactions from a bird's-eye perspective.</p>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          </div>
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Locations</div>
+          <div class="stat-desc">Highways, urban roads, ramps, roundabouts, intersections across China</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <div class="stat-number">750h+</div>
+          <div class="stat-label">Flight Duration</div>
+          <div class="stat-desc">Continuous aerial video capture using DJI drones</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div class="stat-number">10.5M+</div>
+          <div class="stat-label">Trajectory Segments</div>
+          <div class="stat-desc">Individual vehicle trajectories extracted with rich kinematic parameters</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="stat-number">7.5M+</div>
+          <div class="stat-label">Road Users Captured</div>
+          <div class="stat-desc">Vehicles, pedestrians, cyclists and their interactions</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Section -->
+  <section class="data-section" id="data">
+    <div class="container">
+      <h2 class="section-title">Naturalistic Driving Dataset</h2>
+      <p class="section-subtitle">Bird's-eye view trajectory data with comprehensive kinematic parameters, enabling scenario extraction aligned with ISO 34502.</p>
+
+      <div class="data-features">
+        <div class="data-feature">
+          <h3>Trajectory Parameters</h3>
+          <ul class="param-list">
+            <li>Position (x, y) & velocity (vx, vy)</li>
+            <li>Acceleration & heading angle</li>
+            <li>Lane ID & driving direction</li>
+            <li>Surrounding vehicle IDs (preceding, following, alongside)</li>
+            <li>Safety metrics: minDHW, minTHW, minTTC</li>
+            <li>Lane change events & traveled distance</li>
+          </ul>
+        </div>
+        <div class="data-feature">
+          <h3>Road Scenarios</h3>
+          <ul class="param-list">
+            <li>Highway mainline & ramps</li>
+            <li>Urban intersections & roundabouts</li>
+            <li>Mixed traffic zones (vehicles, pedestrians, cyclists)</li>
+            <li>Adverse conditions (rain, snow, ice)</li>
+            <li>Cut-in, lane change, car-following scenarios</li>
+            <li>Long-tail high-risk interaction events</li>
+          </ul>
+        </div>
+        <div class="data-feature">
+          <h3>Data Pipeline</h3>
+          <ul class="param-list">
+            <li>DJI drone aerial video capture (4K)</li>
+            <li>AI-based vehicle detection & tracking</li>
+            <li>Homography-based coordinate transform</li>
+            <li>Trajectory smoothing & validation</li>
+            <li>Scenario tagging per ISO 34502</li>
+            <li>3DGS high-fidelity 3D reconstruction</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section class="solutions" id="solutions">
+    <div class="container">
+      <h2 class="section-title">Solutions</h2>
+      <p class="section-subtitle">Three evaluation paradigms powered by naturalistic driving data.</p>
+
+      <div class="solutions-grid">
+        <div class="solution-card">
+          <div class="solution-number">01</div>
+          <h3>Compliance Safety Evaluation</h3>
+          <p class="solution-zh">合规性安全测评</p>
+          <p>Provide naturalistic driving baselines to fill the quantitative gaps in current standards. Reference parameters (P5–P95 percentiles) for regulation-aligned testing.</p>
+        </div>
+        <div class="solution-card">
+          <div class="solution-number">02</div>
+          <h3>Human-Like Behavior Evaluation</h3>
+          <p class="solution-zh">拟人化测评</p>
+          <p>P25–P75 mainstream driving behavior as the human baseline. Benchmark automated vehicle behavior against real human drivers for comfort and efficiency.</p>
+        </div>
+        <div class="solution-card">
+          <div class="solution-number">03</div>
+          <h3>Risk Exposure Evaluation</h3>
+          <p class="solution-zh">事故数据风险测评</p>
+          <p>Naturalistic data as the "denominator" + accident data as the "numerator" — computing real-world exposure rates for scenario-based risk assessment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">About</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p><strong>DRIVEResearch (驭研科技)</strong> is a data-driven company focused on automated driving safety, founded by researchers from Jilin University's Automated Driving Safety Joint Lab.</p>
+          <p>We specialize in aerial naturalistic driving data collection and scenario-based safety analysis, with deep expertise in SOTIF (ISO 21448) and functional safety (ISO 26262).</p>
+          <div class="about-affiliations">
+            <div class="affiliation">
+              <h4>Academic Base</h4>
+              <p>Jilin University — College of Automotive Engineering<br>Automated Driving Safety Joint Lab</p>
+            </div>
+            <div class="affiliation">
+              <h4>Industry Partner</h4>
+              <p>ZHUOYU Technology (卓驭科技, formerly DJI Automotive)<br>Functional safety collaboration</p>
+            </div>
+            <div class="affiliation">
+              <h4>International Collaboration</h4>
+              <p>fka / leveLXData (Aachen, Germany)<br>Global data sharing partnership</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-standards">
+          <h3>Standards & Expertise</h3>
+          <ul>
+            <li>ISO 21448 — SOTIF</li>
+            <li>ISO 26262 — Functional Safety</li>
+            <li>ISO 34502 — Scenario-Based Testing</li>
+            <li>UN R157 — ALKS Regulation</li>
+            <li>GB/T — China National Standards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <p class="section-subtitle">Interested in our data or solutions? Let's talk.</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Email</h3>
+          <p><a href="mailto:zhangyuxin@jlu.edu.cn">zhangyuxin@jlu.edu.cn</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>Location</h3>
+          <p>Jilin University, Changchun, China<br>Currently visiting: Newcastle, UK</p>
+        </div>
+        <div class="contact-card">
+          <h3>Follow</h3>
+          <p>
+            WeChat: 张玉新-AutoZyx<br>
+            <a href="https://www.linkedin.com/in/yuxinzhang-jlu/" target="_blank" rel="noopener">LinkedIn</a> &middot;
+            <a href="https://github.com/AutoZYX" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>&copy; 2024–2026 DRIVEResearch (驭研科技). All rights reserved.</p>
+        <p class="footer-icp">吉ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          document.querySelector('.nav-links').classList.remove('open');
+        }
+      });
+    });
+
+    // Navbar background on scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Animate stats on scroll
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.stat-card, .solution-card, .data-feature').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+
+</body>
+</html>
