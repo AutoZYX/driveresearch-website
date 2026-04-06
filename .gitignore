@@ -3,3 +3,7 @@
 *.swp
 *.swo
 *~
+*.pdf
+*.docx
+*.pptx
+ScreenShot_*
