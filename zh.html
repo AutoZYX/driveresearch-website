@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>驭研科技 — 场景数据驱动自动驾驶安全</title>
+  <meta name="description" content="驭研科技（DRIVEResearch）提供大规模航测自然驾驶数据集与场景驱动安全评价方案。">
+  <link rel="alternate" hreflang="en" href="index.html">
+  <link rel="alternate" hreflang="zh" href="zh.html">
+  <link rel="icon" href="images/logo-square.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="zh">
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo"><img src="images/logo-white.png" alt="驭研科技" class="nav-logo-img"></a>
+      <button class="nav-toggle" aria-label="切换菜单" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="#overview">概览</a></li>
+        <li><a href="#framework">框架</a></li>
+        <li><a href="#data">数据</a></li>
+        <li><a href="#datasets">开源数据集</a></li>
+        <li><a href="#applications">应用</a></li>
+        <li><a href="#about">关于</a></li>
+        <li><a href="#contact">联系</a></li>
+        <li><span class="lang-switch"><a href="index.html">EN</a><a href="zh.html" class="active">中文</a></span></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <img src="images/shoutu.jpg" alt="航拍环岛交通" class="hero-bg">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>从人类驾驶<br>到类人驾驶</h1>
+      <p class="hero-desc">我们从空中捕捉人类真实的驾驶行为，用千万级轨迹数据构建基准线，让智能驾驶更安全、更舒适、更像人。</p>
+      <div class="hero-actions">
+        <a href="#data" class="btn btn-primary">探索数据集</a>
+        <a href="#contact" class="btn btn-outline">联系我们</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Overview Stats -->
+  <section class="overview" id="overview">
+    <div class="container">
+      <h2 class="section-title">数据概览</h2>
+      <p class="section-subtitle">全球规模领先的航测自然驾驶数据集，从鸟瞰视角捕捉真实交通交互行为。</p>
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="counter" data-target="750" data-suffix="h+">0</span></div>
+          <div class="stat-label">飞行时长</div>
+          <div class="stat-desc">使用DJI无人机在全国范围内持续采集航拍视频</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="counter" data-target="1050" data-suffix="万+">0</span></div>
+          <div class="stat-label">轨迹段</div>
+          <div class="stat-desc">提取的单车轨迹片段，含完整运动学参数</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="counter" data-target="40" data-suffix="+">0</span></div>
+          <div class="stat-label">采集地点</div>
+          <div class="stat-desc">覆盖高速、城市、匝道、环岛、交叉口等场景</div>
+        </div>
+        <div class="stat-card reveal">
+          <div class="stat-number"><span class="counter" data-target="750" data-suffix="万+">0</span></div>
+          <div class="stat-label">道路参与者</div>
+          <div class="stat-desc">机动车、行人、骑行者及其交互行为</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Framework -->
+  <section class="framework" id="framework">
+    <div class="container">
+      <h2 class="section-title">两条基准线</h2>
+      <p class="section-subtitle">智能驾驶需要两条参考线——一条来自极限，一条来自日常。两条线之间，就是智能驾驶该有的样子。</p>
+      <img src="images/two-baselines.jpg" alt="两条基准线框架" class="framework-img reveal">
+      <div class="framework-cols">
+        <div class="framework-card reveal">
+          <h3>安全底线</h3>
+          <p>源自场地测试与法规要求（UN R157、ISO 34502），覆盖极端工况——这是绝对不能突破的硬底线。</p>
+        </div>
+        <div class="framework-card highlight reveal">
+          <h3>类人基准</h3>
+          <p>源自自然驾驶数据，捕捉千万级驾驶者在99%以上日常场景中的真实行为——定义舒适性和通行效率的软参考。</p>
+        </div>
+      </div>
+      <div class="framework-callout reveal">
+        两条线之间 = 智能驾驶该有的样子——安全是底线，类人是标杆。
+      </div>
+      <div class="eval-dims">
+        <span class="eval-dim reveal">安全感知</span>
+        <span class="eval-dim reveal">舒适性</span>
+        <span class="eval-dim reveal">通行效率</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data -->
+  <section class="data-section" id="data">
+    <div class="container">
+      <h2 class="section-title">自然驾驶数据集</h2>
+      <p class="section-subtitle">鸟瞰视角轨迹数据，涵盖完整运动学参数，支持ISO 34502场景提取。</p>
+      <div class="data-gallery">
+        <img src="images/dingzhi.jpg" alt="多样化道路场景" class="data-img reveal">
+        <img src="images/handao.jpg" alt="航拍环岛车辆追踪" class="data-img reveal">
+      </div>
+      <div class="data-features">
+        <div class="data-feature reveal">
+          <h3>轨迹参数</h3>
+          <ul class="param-list">
+            <li>位置 (x, y) 与速度 (vx, vy)</li>
+            <li>加速度与航向角</li>
+            <li>车道ID与行驶方向</li>
+            <li>周车ID（前车、后车、侧车）</li>
+            <li>安全指标：minDHW、minTHW、minTTC</li>
+            <li>换道事件与行驶距离</li>
+          </ul>
+        </div>
+        <div class="data-feature reveal">
+          <h3>道路场景</h3>
+          <ul class="param-list">
+            <li>高速主路与匝道</li>
+            <li>城市交叉口与环岛</li>
+            <li>人车混行区域</li>
+            <li>恶劣天气（雨、雪、冰）</li>
+            <li>施工区域</li>
+            <li>长尾高风险交互事件</li>
+          </ul>
+        </div>
+        <div class="data-feature reveal">
+          <h3>数据管线</h3>
+          <ul class="param-list">
+            <li>DJI无人机4K航拍采集</li>
+            <li>AI目标检测与跟踪</li>
+            <li>单应矩阵坐标变换</li>
+            <li>轨迹平滑与验证</li>
+            <li>ISO 34502场景标注</li>
+            <li>3DGS高保真三维重建</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Open Datasets -->
+  <section class="datasets" id="datasets">
+    <div class="container">
+      <h2 class="section-title">开源数据集</h2>
+      <p class="section-subtitle">降低自然驾驶研究的使用门槛，面向学术研究免费开放。</p>
+      <div class="datasets-grid">
+        <div class="dataset-card reveal">
+          <img src="images/AD4CHE.jpg" alt="AD4CHE数据集">
+          <div class="dataset-card-body">
+            <h3>AD4CHE</h3>
+            <span class="dataset-badge">400+机构申请使用</span>
+            <p>高速公路与快速路拥堵场景，包含丰富的跟车与换道交互行为数据。</p>
+            <a href="https://github.com/AutoZYX" class="dataset-link">了解更多 &rarr;</a>
+          </div>
+        </div>
+        <div class="dataset-card reveal">
+          <img src="images/SinD.jpg" alt="SinD数据集">
+          <div class="dataset-card-body">
+            <h3>SinD</h3>
+            <span class="dataset-badge">信号交叉口</span>
+            <p>信号灯控制交叉口的机动车、行人、骑行者轨迹数据，含信号相位信息。</p>
+            <a href="https://github.com/AutoZYX" class="dataset-link">了解更多 &rarr;</a>
+          </div>
+        </div>
+        <div class="dataset-card reveal">
+          <img src="images/VRUD.jpg" alt="VRUD数据集">
+          <div class="dataset-card-body">
+            <h3>VRUD</h3>
+            <span class="dataset-badge">弱势道路使用者</span>
+            <p>城市人车混行环境中行人、骑行者、电动车的检测与跟踪数据。</p>
+            <a href="https://github.com/AutoZYX" class="dataset-link">了解更多 &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Applications -->
+  <section class="applications" id="applications">
+    <div class="container">
+      <h2 class="section-title">五大应用方向</h2>
+      <p class="section-subtitle">一个答案——自然驾驶数据——五个落地方向。</p>
+      <img src="images/five-applications.jpg" alt="五大应用方向" class="app-visual reveal">
+      <div class="app-grid">
+        <div class="app-card reveal">
+          <div class="app-number">01</div>
+          <h3>产品定义与系统开发</h3>
+          <p>用数据驱动的阈值替代经验猜测，为ADAS/AD系统设计和参数标定提供依据。</p>
+        </div>
+        <div class="app-card featured reveal">
+          <div class="app-number">02</div>
+          <h3>类人驾驶测评</h3>
+          <p>基于千万级轨迹的P25-P75百分位基线，场景差异化、统计有据，而非专家拍脑袋。</p>
+        </div>
+        <div class="app-card reveal">
+          <div class="app-number">03</div>
+          <h3>标准制定与合规测试</h3>
+          <p>用代表性自然驾驶参数（P5-P95）填补现行标准中的量化空白。</p>
+        </div>
+        <div class="app-card reveal">
+          <div class="app-number">04</div>
+          <h3>事故研究</h3>
+          <p>自然驾驶数据为"分母"，事故数据为"分子"，计算真实场景的风险暴露率。</p>
+        </div>
+        <div class="app-card reveal">
+          <div class="app-number">05</div>
+          <h3>车端持续优化</h3>
+          <p>将人类驾驶行为模型部署为车端实时参考系统，持续评估驾驶性能。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" id="about">
+    <div class="container">
+      <h2 class="section-title">关于我们</h2>
+      <img src="images/about-overview.jpg" alt="驭研科技概览" class="about-banner reveal">
+      <div class="about-content">
+        <div class="about-text">
+          <p><strong>驭研科技（DRIVEResearch）</strong>是一家专注于自动驾驶安全的数据驱动公司，由吉林大学自动驾驶安全联合实验室的研究团队创立。</p>
+          <p>我们专注于航测自然驾驶数据采集与场景驱动安全分析，在SOTIF（ISO 21448）和功能安全（ISO 26262）领域拥有深厚积累。</p>
+          <div class="affiliations">
+            <div class="affiliation">
+              <h4>学术基地</h4>
+              <p>吉林大学<br>自动驾驶安全联合实验室</p>
+            </div>
+            <div class="affiliation">
+              <h4>产业合作</h4>
+              <p>卓驭科技<br>（原大疆车载）</p>
+            </div>
+            <div class="affiliation">
+              <h4>国际合作</h4>
+              <p>fka / leveLXData<br>（德国亚琛）</p>
+            </div>
+          </div>
+        </div>
+        <div class="standards-box">
+          <h3>标准与专业能力</h3>
+          <ul>
+            <li>ISO 21448 — 预期功能安全</li>
+            <li>ISO 26262 — 功能安全</li>
+            <li>ISO 34502 — 场景驱动测试</li>
+            <li>UN R157 — ALKS法规</li>
+            <li>GB/T — 中国国家标准</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="section-title">联系我们</h2>
+      <p class="section-subtitle">对我们的数据或方案感兴趣？期待与您交流。</p>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>邮箱</h3>
+          <p><a href="mailto:contact@driveresearch.tech">contact@driveresearch.tech</a></p>
+        </div>
+        <div class="contact-card">
+          <h3>地址</h3>
+          <p>中国长春·净月高新区<br>数字科技孵化基地9A-2</p>
+        </div>
+        <div class="contact-card">
+          <h3>关注我们</h3>
+          <p>
+            公众号：张玉新-AutoZyx<br>
+            <a href="https://cn.linkedin.com/in/zhangyuxin" target="_blank" rel="noopener">LinkedIn</a> &middot;
+            <a href="https://github.com/AutoZYX" target="_blank" rel="noopener">GitHub</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <p>&copy; 2024–2026 驭研科技（DRIVEResearch）</p>
+        <p>吉ICP备XXXXXXXX号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
