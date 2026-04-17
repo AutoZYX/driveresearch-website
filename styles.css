@@ -139,7 +139,6 @@ img { max-width: 100%; height: auto; display: block; }
 .app-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .app-card { padding: 28px; border-radius: var(--radius); border: 1px solid var(--gray-200); background: var(--white); transition: transform 0.3s, box-shadow 0.3s; }
 .app-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-.app-card.featured { border: 2px solid var(--accent); }
 .app-number { font-size: 36px; font-weight: 700; color: var(--accent); opacity: 0.25; line-height: 1; margin-bottom: 8px; }
 .app-card h3 { font-size: 17px; font-weight: 700; color: var(--navy); margin-bottom: 4px; }
 .app-zh { font-size: 13px; color: var(--blue); margin-bottom: 12px; }
