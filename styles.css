@@ -44,8 +44,11 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 72px; }
 .nav-logo-img { height: 44px; width: auto; }
 .nav-links { display: flex; list-style: none; gap: 32px; align-items: center; }
-.nav-links a { color: var(--white); font-size: 15px; font-weight: 500; letter-spacing: 0.3px; opacity: 0.85; transition: opacity 0.2s; }
+.nav-links a { color: var(--white); font-size: 15px; font-weight: 500; letter-spacing: 0.3px; opacity: 0.85; transition: opacity 0.2s, color 0.2s; }
 .nav-links a:hover { opacity: 1; color: var(--white); }
+/* Active section — peach/accent-light; mirrors DRIVEResearch data platform
+   top-nav active style. JS scrollspy in scripts.js toggles .active. */
+.nav-links > li > a.active { opacity: 1; color: var(--accent-light); }
 
 .lang-switch { display: inline-flex; border: 1px solid rgba(255,255,255,0.3); border-radius: 20px; overflow: hidden; margin-left: 8px; }
 .lang-switch a { padding: 4px 12px; font-size: 12px; font-weight: 600; text-transform: none; letter-spacing: 0; opacity: 1; }

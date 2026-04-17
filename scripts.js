@@ -16,6 +16,30 @@ window.addEventListener('scroll', () => {
   nav.classList.toggle('scrolled', window.scrollY > 50);
 });
 
+// ===== Scrollspy — active section → highlight nav link =====
+// Watch each anchored section; whichever is intersecting the top third of
+// the viewport wins. Mirrors DRIVEResearch data platform nav active cue.
+(() => {
+  const sectionIds = ['overview','framework','data','datasets','applications','about','contact'];
+  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+  if (!sections.length) return;
+  const navLinks = new Map();
+  document.querySelectorAll('.nav-links > li > a[href^="#"]').forEach(a => {
+    navLinks.set(a.getAttribute('href').slice(1), a);
+  });
+  const setActive = (id) => {
+    navLinks.forEach((a, key) => a.classList.toggle('active', key === id));
+  };
+  const io = new IntersectionObserver(entries => {
+    // Pick the most-visible section that's currently intersecting.
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    if (visible.length) setActive(visible[0].target.id);
+  }, { rootMargin: '-72px 0px -50% 0px', threshold: [0, 0.25, 0.5, 1] });
+  sections.forEach(s => io.observe(s));
+})();
+
 // ===== Scroll reveal animation =====
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
